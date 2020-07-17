@@ -1,0 +1,29 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: kafka-start
+  kafka:
+    bootstrap-servers: 120.79.166.245:9092
+#=============== provider  =======================
+    producer:
+      retries: 0
+  # 每次批量发送消息的数量
+      batch-size: 16384
+      buffer-memory: 33554432
+
+  # 指定消息key和消息体的编解码方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  #=============== consumer  =======================
+  # 指定默认消费者group id
+    consumer:
+      group-id: user-log-group
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      auto-commit-interval: 100
+
+  # 指定消息key和消息体的编解码方式
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
