@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class KafkaStartApplication {
     /*@Autowired
     private KafkaProvider provider;

@@ -16,8 +16,8 @@ import org.springframework.kafka.annotation.EnableKafkaStreams;
 import java.util.Arrays;
 import java.util.Properties;
 
-@EnableKafkaStreams
-@Configuration
+//@EnableKafkaStreams
+//@Configuration
 public class MyStream {
 
     public static void main(String[] args) {

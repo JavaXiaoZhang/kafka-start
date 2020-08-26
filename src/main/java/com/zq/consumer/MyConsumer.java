@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.*;
 
-@Component
+//@Component
 public class MyConsumer {
     /*@Autowired
     private KafkaTemplate template;
