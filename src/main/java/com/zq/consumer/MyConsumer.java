@@ -34,8 +34,8 @@ public class MyConsumer {
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
-        consumer.subscribe(Arrays.asList("my-topic", "bar"));
-        final int minBatchSize = 200;
+        consumer.subscribe(Arrays.asList("my-filtered"));
+        final int minBatchSize = 50;
         List<ConsumerRecord<String, String>> buffer = new ArrayList<>();
 
         while (true) {
